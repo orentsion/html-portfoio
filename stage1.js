@@ -250,8 +250,7 @@ for(var i=0; i<numberOfKeyButtons; i++)
 function fetchData()
 {
     
-    var fileContent;
-
+    
     fetch('./data.txt')
        .then(response => {
           if (!response.ok) {
@@ -261,7 +260,7 @@ function fetchData()
   })
   .then(data => {
       //document.getElementById('output').textContent = data;
-      fileContent = data;
+      const fileContent = data;
   })
   .catch(error => {
     console.error('Error loading the text file:', error);
