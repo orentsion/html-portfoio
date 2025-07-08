@@ -260,6 +260,15 @@ function fetchData()
         console.error('Error fetching the file:', error);
       });
 
+     fileIsOpenFlag = true;  
+
+     if(fileIsOpenFlag)
+     {
+        
+         var annonce = 'טעינת הקובץ הצליחה !';
+         alert(annonce);
+ 
+     }     
 
 
     // myLines = fileContent.split(/\r\n|\n/);
