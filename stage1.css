@@ -1,0 +1,469 @@
+
+  
+
+
+h2  {
+
+  
+  margin: 0%;
+}
+
+
+
+h5 {
+
+   font-family: "Rubik Mono One", monospace;
+   font-weight: 400;
+   font-style: normal;   
+
+   color: black;
+   font-size: 0.8rem;
+    
+}
+
+
+
+.player  {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+
+    border: 1px solid black;
+    background-color: #CBE2B5;
+  
+    
+    height: 2.2rem;
+    width: 12.6rem;
+    border-radius: 20px;
+    
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+
+    color: black;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1px;
+    margin: 0px;
+}
+
+
+
+
+.playerDiv  {
+    border: 1px solid black;
+    background-color: #E7FBE6;
+  
+    
+    height: 2.5rem;
+    
+    border-radius: 20px;
+       
+    padding: 1px;
+    margin-bottom: 1px;
+}
+
+
+
+.titleSubject  {
+    border: 2px solid black;
+    background-color: #545B77;
+  
+    height: 2rem;
+    width: 5.7rem;
+    
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 9px;
+    margin-bottom: 1px;
+}
+
+
+
+
+.subjectDiv  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid black;
+    
+    background-color: #D1E9F6;
+  
+    height: 2rem;
+    width: 24.4rem;
+ 
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 9px;
+    margin-bottom: 1px;
+}
+
+
+.titleName  {
+    border: 2px solid black;
+   
+    background-color: #C37B89;
+
+    height: 2rem;
+    width: 5.7rem;
+    
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 9px;
+    margin-bottom: 1px;
+}
+
+
+.nameDiv {
+    border: 2px solid black;
+    
+    background-color: #FFE3E1;
+  
+    height: 2rem;
+    width: 11.9rem;
+ 
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 9px;
+    margin-bottom: 1px;
+}
+
+
+
+.titleClue  {
+    border: 2px solid black;
+    background-color: #597445;
+    
+    height: 2rem;
+    width: 5.7rem; 
+
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 9px;
+    margin-bottom: 1px;
+}
+
+
+
+
+.clueDiv {
+    border: 2px solid black;
+    background-color: #E7F0DC;
+    
+    height: 2rem;
+    width: 24.4rem;
+    
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 9px;
+    margin-bottom: 1px;
+}
+
+
+
+.titlePoints  {
+    border: 2px solid black;
+    background-color: #967E76;
+  
+    height: 2rem;
+    width: 5.7rem;
+    
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 9px;
+    margin-bottom: 1px;
+}
+
+
+
+.pointsDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+    border: 2px solid black;
+     
+    background-color: #F3E9DD;
+
+    height: 2rem;
+    width: 11.9rem;
+    
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 9px;
+    margin-bottom: 1px;
+}
+
+
+
+.fileInputDiv {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    border: 1px solid black;
+    background-color: #FCF8E8;
+     
+    height: 2.9rem;
+    width: 45rem;
+    border-radius: 10px;
+    
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    padding-left: 10px;
+    margin-bottom: 2px;
+
+}
+
+
+
+.mainContainer  {
+   
+   display: inline-block;
+   justify-content: center;
+   align-items: center;
+
+   border: 2px solid black;
+   background-color: #F2EEE5;
+   
+   width: 55rem;
+   height: 59.5rem;
+  
+   margin: 0;
+   padding: 0;
+   margin-left: 20%;
+    
+}
+
+
+
+
+
+.container1  {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   
+   gap: 0.15rem;
+   
+   margin-bottom: 0.6%;
+   
+}
+
+
+.container2  {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr ;
+   
+   gap: 0.2rem;
+
+   margin-bottom: 0.6%;
+
+}
+
+
+.container3  {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+   
+   margin-left: 2rem;
+   margin-right: 2rem;
+
+   gap: 0.2rem;
+
+   margin-bottom: 0.5%;
+
+}
+
+
+
+.container8  {
+   display: flex; 
+   justify-content: center;
+   align-items: center;   
+  
+   gap: 0.1rem;
+ 
+}
+
+
+.container10  {
+   display: flex;
+   justify-content: center;
+   align-items: center;   
+   
+   gap: 0.5rem;
+   
+   margin-top: 0.6%;
+   margin-bottom: 0.6%;
+
+
+}
+
+
+.container11  {
+   display: flex;
+   justify-content: center;
+   align-items: center;   
+   
+   gap: 0.1rem;
+   
+
+}
+
+
+.letterDiv   {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
+   height: 4.9rem;
+   width: 3.5rem;
+
+   border: 1px solid black;
+   border-radius: 10%;
+   background-color: #f8efcb;   
+
+   font-size: 2rem;
+   color: black;
+
+}
+
+
+
+
+.btnDiv   {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
+   height: 4.3rem;
+   width: 7.4rem;
+
+
+   border: 1px solid black;
+   border-radius: 20%;
+   background-color: #f0d9b5;
+
+}
+
+
+
+.btn   {
+   
+    height: 3.2rem;
+    width: 5rem;
+ 
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.9rem;
+    
+    border-radius: 20%;
+
+    
+    
+}
+
+
+
+
+.div_continue  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2.9rem;
+    width: 8rem;  
+  
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #FCF8E8;
+
+}
+
+
+.btn_continue   {
+    
+    height: 2.2rem;
+    width: 6rem;
+
+    font-size: 1rem;
+    border-radius: 10px;
+
+}
+
+
+
+.pressed {
+    font-weight: 900;
+    color: #331155;
+}
+
+
+.changedLetter {
+    background-color: #3F7D58;
+    color: white;
+    
+}
+
+
+.pressedLetter {
+    background-color: #D0DDD0;
+    color: white;
+
+}
+
+
+.pressedLetterDiv {
+    background-color: #E7FBE6;
+    
+}
+
+.wrongRedStyle {
+    color: white;
+    background-color: #D45079;
+    font-size: 2.2rem;
+    font-weight: 900;
+        
+}
+
+
+.buttonGreen {
+   color: white;
+   background-color: #92BA92;
+   font-size: 1.2rem;
+   
+}
+
+
+#fileInput {
+   font-size: 1.1rem;
+   
+}

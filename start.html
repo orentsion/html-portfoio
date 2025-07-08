@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>פ. השומה - שעשועון ידע כללי</title>
+<link rel="stylesheet" href="./start.css">
+
+
+</head>
+
+<body>
+   
+  
+ 
+    <div class="mainContainer">
+    
+     <div class="container4" dir="rtl">
+    
+        <div class="letterDiv"><h1>פ</h1></div>
+        <div class="letterDiv"><h1>ק</h1></div>
+        <div class="letterDiv"><h1>י</h1></div>
+        <div class="letterDiv"><h1>ד</h1></div>
+        <div class="spaceDiv"><h1></h1></div>
+        <div class="letterDiv"><h1>ה</h1></div>
+        <div class="letterDiv"><h1>ש</h1></div>
+        <div class="letterDiv"><h1>ו</h1></div>
+        <div class="letterDiv"><h1>מ</h1></div>
+        <div class="letterDiv"><h1>ה</h1></div>
+
+     </div>
+    
+     <div class="container2">
+        
+        <h2 dir="rtl">שעשועון הידע לתלמידי ומורי ישראל</h2>
+        
+     </div>
+
+     <hr/>
+
+     <div class="container1">
+  
+        <div class="imageDiv"><img class="tileImage" src="./images/pkidshuma.jpg"></div>
+        <div class="text-right">
+        <p dir="rtl">ברוכים הבאים לשעשועון הידע הכללי "פקיד השומה".</br>
+         תרגול יומיומי למשך כ-1/4 שעה בשעשועון זה, ישפר תוך תקופה קצרה את רמת ידיעותיכם במגוון תחומים בעלי ערך.</br>
+         הזינו בבקשה כמה הגדרות בסיסיות והתחילו להתאמן.</br>
+         הקפידו לשנות את ערך משתנה גיוון השאלות.
+        </p>
+        </div>
+        
+     </div>
+    
+     <hr/>
+
+
+    <div class="container5" dir="rtl">
+     
+    <label>בחר משחק</label>
+    <select class="definitions" id="gameTypeSel" onChange="handleChange()">
+    <option value="0">הדגמה</option>
+    <option value="1" selected>תרגול קצר</option>
+    <option value="2">תרגול ארוך</option>
+    <option value="3">טורניר</option>
+    </select>
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     
+    <label>בחר דרגת חשיפה</label>
+    <select class="definitions" id="exposeLevelSel" onChange="handleChange()">
+    <option value="0">ללא חשיפה</option>
+    <option value="1">אות ראשונה</option>
+    <option value="2" selected>אות אקראית</option>
+    <option value="3">דרגה 3</option>
+    <option value="4">דרגה 4</option>
+    <option value="5">דרגה 5</option>
+    <option value="6">דרגה 6</option>
+    <option value="7">דרגה 7</option>
+    </select>    
+    
+     
+    </div>
+
+
+    <div class="container5">
+ 
+    <input type="number" min="0" max="999" id="questsVar" dir="rtl" onChange="handleChange()" value="100">בחר משתנה גיוון שאלות (0-999)</input>
+   
+    <span></span>
+    <span></span>
+    
+    
+    <select class="definitions" id="selarySel" onChange="handleChange()">
+    <option value="3" selected>נקודה = 3</option>
+    <option value="5">נקודה = 5</option>
+    <option value="7">נקודה = 7</option>
+    <option value="10">נקודה = 10</option>
+    </select>
+    <label>בחר שכר עבודה</label>
+      
+    </div>
+
+
+    <div class="container6">
+
+        <input type="text" class="inputName" id="player4" dir="rtl" maxlength="10" onChange="handleChange()">
+        <label>נישום ד</label>
+
+        <input type="text" class="inputName" id="player3" dir="rtl" maxlength="10" onChange="handleChange()">
+        <label>נישום ג</label>        
+
+        <input type="text" class="inputName" id="player2" dir="rtl" maxlength="10" onChange="handleChange()">
+        <label>נישום ב</label>
+        
+        <input type="text" class="inputName" id="player1" dir="rtl" maxlength="10" onChange="handleChange()">
+        <label>נישום א</label>
+        
+    </div>
+
+  
+    <hr/>
+   
+   <div class="container3">
+   <h4 id="gameInformation" dir="rtl">אלה הן הגדרות המשחק המבוקש:</h4> 
+   </div>
+
+  
+   <div class="container2">
+   <button class="btn" id="startGame" onclick="startGame()" autofocus>התחל משחק</button>
+   </div> 
+    
+    
+
+   <footer>
+     
+   </footer>
+
+<script src="start.js" charset="utf-8"></script>   
+</body>
+
+</html>

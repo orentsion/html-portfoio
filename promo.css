@@ -1,0 +1,236 @@
+
+.mainContainer  {
+   
+   display: inline-block;
+   justify-content: center;
+   align-items: center;
+
+   border: 2px solid black;
+   background-color: #faf9f6;
+
+   width: 55rem;
+   height: 72.5rem;
+  
+   margin: 0;
+   padding: 0;
+   margin-left: 20%;
+    
+}
+
+
+
+.container1  {
+   display: flex;
+   align-items: top;   
+   justify-content: center;
+   
+   gap: 4rem;
+        
+   text-align: justify;
+
+
+   margin-top: 0.75%;
+  
+}
+
+
+
+
+
+.container2  {
+   display: flex;
+   align-items: bottom;   
+   justify-content: center;
+   gap: 4rem;
+ 
+   margin-bottom: 0.5rem;
+
+     
+}
+
+
+.container3  {
+   display: flex;
+   align-items: center;   
+   justify-content: right;
+
+   border: 5px solid white;
+
+   background-color: #336D82;
+   color: white;   
+
+   margin-top: 0px;
+   margin-right: 0px;
+   margin-bottom: 0px;
+   padding: 5px;
+
+  
+}
+
+
+.container4  {
+   display: flex;
+   align-items: center;   
+   justify-content: center;
+   gap: 1rem;
+ 
+   margin-top: 2%;
+   margin-bottom: 2%;
+  
+}
+
+
+.container5  {
+   display: flex;
+   align-items: top;   
+   justify-content: center;
+   
+   gap: 1rem;
+        
+   text-align: justify;
+
+   margin: 1.5%;
+  
+}
+
+
+
+
+
+h1  {
+   
+   font-size: 4rem;
+   color: black;   
+ 
+   font-family: "Rubik Mono One", monospace;
+   font-weight: 900;
+   font-style: normal;
+
+   margin: 0px;
+  
+}
+
+
+h2  {
+   
+   font-size: 2.5rem;
+   color: #336D82;   
+ 
+   font-family: "Rubik Mono One", monospace;
+   font-weight: 900;
+   font-style: normal;
+
+   margin: 0px;
+  
+}
+
+
+h3  {
+   
+   font-size: 1.9rem;
+   color: black;   
+ 
+   font-family: "Rubik Mono One", monospace;
+   font-weight: 500;
+   font-style: normal;
+
+   margin: 0px;
+
+  
+}
+
+
+h4  {
+   
+   font-size: 1.8rem;
+   color: white;   
+ 
+   font-family: "Rubik Mono One", monospace;
+   font-weight: 500;
+   font-style: normal;
+
+   margin: 0px;
+
+  
+}
+
+
+
+p  {
+   
+   font-size: 1.6rem;
+   color: #000;   
+ 
+   font-family: "Rubik Mono One", monospace;
+   font-weight: 500;
+   font-style: normal;
+
+   text-align: justify;
+   
+   margin: 0px;
+  
+}
+
+
+.tileImage  {
+   height: 13rem;
+   border: 1px solid black;
+   border-radius: 20px;
+
+   float: left;
+   margin-left: 10px;
+}
+
+
+
+.letterDiv  {
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+
+    width: 4rem; 
+    border: 3px solid black;
+    border-radius: 10%; 
+    
+    background-color: #B4EBE6;
+    
+    margin: 0px;
+
+
+}
+
+
+.spaceDiv  {
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+
+    border: 0px solid white; 
+
+    width: 1.5rem;
+    
+    margin: 0px;
+
+
+}
+
+
+.btn {
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 0px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

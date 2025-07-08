@@ -1,0 +1,223 @@
+
+
+.mainContainer  {
+   
+   display: inline-block;
+   justify-content: center;
+   align-items: center;
+
+   border: 2px solid black;
+   background-color: #faf9f6;
+
+   width: 55rem;
+   height: 60rem;
+  
+   margin: 0;
+   padding: 0;
+   margin-left: 20%;
+    
+}
+
+
+
+.container1  {
+   display: flex;
+   align-items: center;   
+   justify-content: center;
+   
+   margin: 2%;
+   
+}
+
+
+
+
+.container2  {
+   display: flex;
+   align-items: bottom;   
+   justify-content: center;
+   gap: 2rem;
+ 
+   margin-top: 0.75%;
+   margin-bottom: 1%;   
+    
+}
+
+
+.container3  {
+   display: flex;
+   align-items: center;   
+   justify-content: right;
+
+   border: 5px solid white;
+
+   background-color: #03A791;
+   color: white;   
+
+   margin-top: 0px;
+   margin-right: 0px;
+   margin-bottom: 0px;
+   padding: 5px;
+
+  
+}
+
+
+.container4  {
+   display: flex;
+   align-items: center;   
+   justify-content: center;
+   gap: 1rem;
+ 
+   margin-top: 2%;
+   margin-bottom: 2%;
+  
+}
+
+
+.container5  {
+   display: flex;
+   align-items: center;   
+   justify-content: center;
+   gap: 2rem;
+ 
+
+   font-size: 1.5rem;
+   color: #632626;   
+    
+   margin: 0px;
+  
+}
+
+
+
+h1  {
+   
+   font-size: 4rem;
+   color: white;   
+ 
+   font-family: "Rubik Mono One", monospace;
+   font-weight: 900;
+   font-style: normal;
+
+   margin: 0px;
+  
+}
+
+
+h2  {
+   
+   font-size: 2.5rem;
+   color: #73946B;   
+ 
+   font-family: "Rubik Mono One", monospace;
+   font-weight: 900;
+   font-style: normal;
+
+   margin: 0px;
+  
+}
+
+
+h3  {
+   
+   font-size: 1.5rem;
+   color: indianred;   
+ 
+   font-family: "Rubik Mono One", monospace;
+   font-weight: 500;
+   font-style: normal;
+
+   margin: 0px;
+
+  
+}
+
+
+h4  {
+   
+   font-size: 2rem;
+   color: white;   
+ 
+   font-family: "Rubik Mono One", monospace;
+   font-weight: 500;
+   font-style: normal;
+
+   margin: 0px;
+
+  
+}
+
+
+
+p  {
+   
+   font-size: 1.9rem;
+   color: #000;   
+ 
+   font-family: "Rubik Mono One", monospace;
+   font-weight: 500;
+   font-style: normal;
+
+   text-align: justify;
+   
+   margin: 0px;
+  
+}
+
+
+
+
+.tileImage  {
+   height: 15rem;
+   border: 1px solid black;
+   border-radius: 20px;
+
+   float: left;
+   margin-left: 10px;
+}
+
+
+
+.letterDiv  {
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+
+    width: 5rem; 
+    border: 3px solid black;
+    border-radius: 10%; 
+    
+    background-color: #537D5D;
+    
+    margin: 0px;
+
+
+}
+
+
+
+
+
+.spaceDiv  {
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+
+    border: 0px solid white; 
+
+    width: 2rem;
+    
+    margin: 0px;
+
+
+}
+
+
+.btn {
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 0px;
+
+}
+
