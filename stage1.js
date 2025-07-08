@@ -259,17 +259,20 @@ function fetchData()
     return response.text();
   })
   .then(data => {
+
       //document.getElementById('output').textContent = data;
       const fileContent = data;
+      myLines = fileContent.split(/\r\n|\n/);
+      fileIsOpenFlag = true;  
+
+
   })
   .catch(error => {
     console.error('Error loading the text file:', error);
   });
 
       
-    myLines = fileContent.split(/\r\n|\n/);
-    fileIsOpenFlag = true;  
-
+    
 
 }
 
