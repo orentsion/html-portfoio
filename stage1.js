@@ -68,13 +68,12 @@ var yoetsHamasPos;
 
 //main() - start
 
- 
+fetchData(); 
 clearDisplay();
 choosePlayers();
 retrieveDataFromStartJSfile();
 buildGameStructure();
 displayPlayersInfo();
-
 
 //main() - end
 
@@ -83,7 +82,7 @@ window.addEventListener('load', function() {
   window.scrollTo(0, 0);
 });
 
-
+/*
 document.getElementById('fileInput').addEventListener('change', function(event) {
   const file = event.target.files[0];
   if (file) {
@@ -104,7 +103,7 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
   }
 
 });
-
+*/
 
 
 
@@ -244,7 +243,34 @@ for(var i=0; i<numberOfKeyButtons; i++)
 
 
 
+function fetchData()
+{
+   
+    fetch('data.txt') // Adjust path as needed
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('output').textContent = data;
+      })
+      .catch(error => {
+        console.error('Error fetching the file:', error);
+      });
 
+
+
+    // myLines = fileContent.split(/\r\n|\n/);
+    //  fileIsOpenFlag = true;  
+
+    const fileContent = document.getElementById('output').textContent;
+    myLines = fileContent.split(/\r\n|\n/);
+    fileIsOpenFlag = true;  
+
+
+}
 
 
 
