@@ -274,12 +274,14 @@ function fetchData()
     // myLines = fileContent.split(/\r\n|\n/);
     //  fileIsOpenFlag = true;  
 
-    const fileContent = document.getElementById('output').textContent;
-    myLines = fileContent.split(/\r\n|\n/);
-    fileIsOpenFlag = true;  
+    const data = document.getElementById('output').textContent;
+    console.log(data);
 
-    annonce = myLines[0];
-    alert(annonce);
+    //myLines = fileContent.split(/\r\n|\n/);
+    //fileIsOpenFlag = true;  
+
+   // annonce = myLines[0];
+   // alert(annonce);
 
 }
 
