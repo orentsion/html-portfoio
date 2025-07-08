@@ -278,6 +278,8 @@ function fetchData()
     myLines = fileContent.split(/\r\n|\n/);
     fileIsOpenFlag = true;  
 
+    annonce = myLines[0];
+    alert(annonce);
 
 }
 
