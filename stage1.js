@@ -68,12 +68,15 @@ var yoetsHamasPos;
 
 //main() - start
 
-fetchData(); 
+ 
 clearDisplay();
 choosePlayers();
 retrieveDataFromStartJSfile();
 buildGameStructure();
 displayPlayersInfo();
+
+
+fetchData();
 
 //main() - end
 
@@ -243,45 +246,31 @@ for(var i=0; i<numberOfKeyButtons; i++)
 
 
 
+
 function fetchData()
 {
-   
-    fetch('data.txt') // Adjust path as needed
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.text();
-      })
-      .then(data => {
-        document.getElementById('output').textContent = data;
-      })
-      .catch(error => {
-        console.error('Error fetching the file:', error);
-      });
+    
+    var fileContent;
 
-     fileIsOpenFlag = true;  
+    fetch('./data.txt')
+       .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+    }
+    return response.text();
+  })
+  .then(data => {
+      //document.getElementById('output').textContent = data;
+      fileContent = data;
+  })
+  .catch(error => {
+    console.error('Error loading the text file:', error);
+  });
 
-     if(fileIsOpenFlag)
-     {
-        
-         var annonce = 'טעינת הקובץ הצליחה !';
-         alert(annonce);
- 
-     }     
+      
+    myLines = fileContent.split(/\r\n|\n/);
+    fileIsOpenFlag = true;  
 
-
-    // myLines = fileContent.split(/\r\n|\n/);
-    //  fileIsOpenFlag = true;  
-
-    const data = document.getElementById('output').textContent;
-    console.log(data);
-
-    //myLines = fileContent.split(/\r\n|\n/);
-    //fileIsOpenFlag = true;  
-
-   // annonce = myLines[0];
-   // alert(annonce);
 
 }
 
