@@ -101,29 +101,6 @@ window.addEventListener('load', function() {
 });
 
 
-/*
-document.getElementById('fileInput').addEventListener('change', function(event) {
-  const file = event.target.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      const fileContent = e.target.result;
-      
-      // Process the file content as needed
-
-      myLines = fileContent.split(/\r\n|\n/);
-      fileIsOpenFlag = true;   
-   
-    };
-
-
-    reader.readAsText(file);
-  }
-
-});
-
-*/
-
 
 document.addEventListener("keydown", function(event) {
      
@@ -228,7 +205,7 @@ function fetchData()
 {
     
     
-    fetch('./data.txt')
+    fetch('./assets/Pkid_Hashuma.txt')
        .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
