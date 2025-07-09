@@ -91,6 +91,8 @@ else
 console.log(playersProf[pkidHashumaPos]);
 console.log(playersProf[yoetsHamasPos]);
 
+fetchData();
+
 //main() - end
 
 
@@ -99,6 +101,7 @@ window.addEventListener('load', function() {
 });
 
 
+/*
 document.getElementById('fileInput').addEventListener('change', function(event) {
   const file = event.target.files[0];
   if (file) {
@@ -119,6 +122,7 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
 
 });
 
+*/
 
 
 document.addEventListener("keydown", function(event) {
@@ -218,6 +222,36 @@ for(var i=0; i<numberOfKeyButtons; i++)
 }
 
 
+
+
+function fetchData()
+{
+    
+    
+    fetch('./data.txt')
+       .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+    }
+    return response.text();
+  })
+  .then(data => {
+
+      //document.getElementById('output').textContent = data;
+      const fileContent = data;
+      myLines = fileContent.split(/\r\n|\n/);
+      fileIsOpenFlag = true;  
+
+
+  })
+  .catch(error => {
+    console.error('Error loading the text file:', error);
+  });
+
+      
+    
+
+}
 
 
 
