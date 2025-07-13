@@ -29,3 +29,11 @@ function goToStart()
    window.open("./start.html","_self"); 
 
 }
+
+
+function goToPurchase()
+{
+  
+   window.open("./purchase.html","_self"); 
+
+}
