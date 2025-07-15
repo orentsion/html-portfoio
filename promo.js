@@ -37,3 +37,10 @@ function goToPurchase()
    window.open("./purchase.html","_self"); 
 
 }
+
+function goToIndex()
+{
+  
+   window.open("./index.html","_self"); 
+
+}

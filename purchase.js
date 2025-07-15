@@ -48,6 +48,32 @@ document.getElementById("userForm").addEventListener("submit", function(event) {
 
 
 
+ document.getElementById('customerForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const formData = {
+      name: this.name.value,
+      address: this.address.value,
+      phone: this.phone.value
+    };
+
+    const res = await fetch('/save', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(formData)
+    });
+
+    const result = await res.text();
+    alert(result);
+  });
+
+
+
+
+
+
+
+
 
 function startPayment()
 {
