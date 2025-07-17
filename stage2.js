@@ -713,7 +713,7 @@ function finalResults()
 
     document.querySelector("#stage").innerHTML = "פודיום";
     document.querySelector("#profession").innerHTML = ""; 
-    document.querySelector("#continue").innerHTML = "התחל משחק"; 
+    document.querySelector("#continue").innerHTML = "חזור להתחלה"; 
 
     gameIsOverFlag = true;
    
@@ -1126,7 +1126,9 @@ function thirdStage()
 function startNewGame()
 {
   
-   window.open("./start.html","_self");
+   //window.open("./start.html","_self");
+   
+   window.open("./index.html","_self");
 
 }
 
