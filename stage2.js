@@ -1009,7 +1009,7 @@ function retrieveDataFromIndexJSfile()
     gameType = localStorage.getItem('gameType');
     selary = localStorage.getItem('selary');
     currency = localStorage.getItem('currency'); 
-    questsVar = localStorage.getItem('questsVar'); 
+    questsVar = localStorage.getItem('questsVar') * 1 ; 
     
     playersRevenue[0] = 8 + selary * playersPoints[0];
     playersRevenue[1] = 6 + selary * playersPoints[1];
@@ -1034,7 +1034,7 @@ function retrieveDataFromStage2JSfile()
 
     gameType = localStorage.getItem('gameType');
     currency = localStorage.getItem('currency'); 
-    questsVar = localStorage.getItem('questsVar');
+    questsVar = localStorage.getItem('questsVar') * 1;
     var textArr = localStorage.getItem('shortQuestsIdArr');
 
     covertTextToArray(shortQuestsIdArr, textArr);

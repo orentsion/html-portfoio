@@ -2502,7 +2502,7 @@ function retrieveDataFromStartJSfile()
     exposeLevel = localStorage.getItem('exposeLevel') * 1;
     selary = localStorage.getItem('selary');
     currency = localStorage.getItem('currency');
-    questsVar = localStorage.getItem('questsVar');
+    questsVar = localStorage.getItem('questsVar') * 1;
      
 
 }
