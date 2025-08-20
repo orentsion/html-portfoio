@@ -54,6 +54,8 @@ var whiteMedal;
 var yoetsHamasFlag = false;
 var gameIsOverFlag = false;
 
+var repetitionCnt = 0;
+var lastRndNum = 0;
 
 //main() - start
 
@@ -87,6 +89,7 @@ else
    displayQuestionInformation(2);
    startYoetsHamasStage();
 }
+
 
 console.log(playersProf[pkidHashumaPos]);
 console.log(playersProf[yoetsHamasPos]);
@@ -261,14 +264,27 @@ function fetchData()
 function readRandomLineFromfile()
 {
 
+   var variationPar = 0;
+   var randomGimatric = randomizeSumForQuestions();
+
+   if(questsVar%9 === 0)
+      variationPar = 0;
+   else if (questsVar%7 === 0)
+      variationPar = questsVar;
+   else if (questsVar%5 === 0)
+      variationPar = randomGimatric;
+   else if (questsVar%3 === 0)
+      variationPar = randomGimatric + questsVar;
+   else
+      variationPar = randomGimatric + questsVar + shortQuestCounter;
+
+
    var counter = 0;
 
    while(counter++ < 1000)
    {
     
-    var variationPar = shortQuestCounter + counter + questsVar;
-  
-    var randomNum = Math.floor(Math.random() * myLines.length) + randomizeSumForQuestions() + variationPar;  
+    var randomNum = Math.floor(Math.random() * myLines.length) + variationPar + counter;  
 
     randomNum = randomNum % myLines.length;    
 
@@ -285,6 +301,7 @@ function readRandomLineFromfile()
    }
 
 }
+
 
 
 function readItemFromLine(itemPosition, line)
@@ -407,8 +424,63 @@ function displayNewShortQuestion()
          displayQuestionInformation(3);
    }
 
+   
    var randomNumber = Math.floor(Math.random() * 100) + 1;
    var random1or2 = randomNumber%2 + 1;
+   
+   if (random1or2 === lastRndNum)
+   {
+      repetitionCnt++;
+   }
+   else
+   {
+      repetitionCnt = 0;
+   }
+
+  
+   if (questsVar === 999)
+   {
+      if(repetitionCnt === 1)
+        {
+         random1or2 = swapping1or2(random1or2);            
+         repetitionCnt = 0;
+        }
+   }
+   else if(questsVar%3 === 0)
+   {
+      if(repetitionCnt === 3)
+        {
+         random1or2 = swapping1or2(random1or2);            
+         repetitionCnt = 0;
+        }
+   }
+   else if (questsVar%4 === 0)
+   {
+      if(repetitionCnt === 4)
+        {
+         random1or2 = swapping1or2(random1or2);            
+         repetitionCnt = 0;
+        }
+   }
+   else if (questsVar%5 === 0)
+   {
+      if(repetitionCnt === 5)
+        {
+         random1or2 = swapping1or2(random1or2);            
+         repetitionCnt = 0;
+        }
+   }
+   else
+   {
+      if(repetitionCnt === 2)
+        {
+         random1or2 = swapping1or2(random1or2);            
+         repetitionCnt = 0;
+        }
+    }
+
+   lastRndNum = random1or2;
+
 
    var newLine = readRandomLineFromfile();
 
@@ -454,6 +526,14 @@ function displayNewShortQuestion()
 
 
 
+function swapping1or2(num1or2)
+{
+   if(num1or2 === 1)
+      return 2;   
+   else
+      return 1;
+
+}
 
 
 

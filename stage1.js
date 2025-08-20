@@ -581,14 +581,28 @@ function clearOldData()
 
 function getNewWordBySubject(subject, level)
 {
-   var counter = 0;
 
+   var variationPar = 0;
+   var randomGimatric = randomizeSumForQuestions();
+
+   if(questsVar%9 === 0)
+      variationPar = 0;
+   else if (questsVar%7 === 0)
+      variationPar = questsVar;
+   else if (questsVar%5 === 0)
+      variationPar = randomGimatric;
+   else if (questsVar%3 === 0)
+      variationPar = randomGimatric + questsVar;
+   else
+      variationPar = randomGimatric + questsVar + subjectCntr + subjectQuestsCntr;
+   
+
+   var counter = 0;
+    
    while(counter++ < 2000)
    {
       
-      var variationPar = subjectCntr * subjectQuestsCntr + questsVar;
-
-      var randomNum = Math.floor(Math.random() * myLines.length) + randomizeSumForQuestions() + variationPar;   
+      var randomNum = Math.floor(Math.random() * myLines.length) + variationPar + counter;   
 
       randomNum = randomNum % myLines.length;      
 
@@ -612,11 +626,9 @@ function getNewWordBySubject(subject, level)
    
     while(counter++ < 2000)
    {
+
+      var randomNum = Math.floor(Math.random() * myLines.length) + variationPar + counter;         
       
-      var variationPar = subjectCntr * subjectQuestsCntr + questsVar;
-
-      var randomNum = Math.floor(Math.random() * myLines.length) + randomizeSumForQuestions() + variationPar;   
-
       randomNum = randomNum % myLines.length;      
 
       var newLine = myLines[randomNum];
@@ -637,6 +649,7 @@ function getNewWordBySubject(subject, level)
 
 
 }
+
 
 
 
