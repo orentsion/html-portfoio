@@ -56,6 +56,8 @@ var gameIsOverFlag = false;
 
 var repetitionCnt = 0;
 var lastRndNum = 0;
+curShortQuest = 0;
+stepSize = 0;
 
 //main() - start
 
@@ -264,6 +266,43 @@ function fetchData()
 function readRandomLineFromfile()
 {
 
+  
+  if(shortQuestCounter <= 1)
+  {
+     curShortQuest = Math.floor(Math.random() * myLines.length) + questsVar;
+     stepSize = 10 + Math.floor(Math.random() * 20);
+  }
+
+   var counter = 0;
+
+   while(counter++ < 1000)
+   {
+
+     curShortQuest = curShortQuest  + stepSize + counter;
+     curShortQuest = curShortQuest % myLines.length;
+    
+    
+     var newLine = myLines[curShortQuest];
+
+     var curId = readItemFromLine(0, newLine);
+
+     if(!checkQuestId(curId))
+         {
+          shortQuestsIdArr.push(curId);
+          return newLine;
+         }    
+ 
+   }
+
+}
+
+
+
+
+/*
+function readRandomLineFromfile()
+{
+
    var variationPar = 0;
    var randomGimatric = randomizeSumForQuestions();
 
@@ -301,6 +340,8 @@ function readRandomLineFromfile()
    }
 
 }
+*/
+
 
 
 
@@ -438,7 +479,7 @@ function displayNewShortQuestion()
    }
 
   
-   if (questsVar === 999)
+   if (questsVar === 666 || questsVar === 999 )
    {
       if(repetitionCnt === 1)
         {

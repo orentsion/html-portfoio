@@ -579,6 +579,71 @@ function clearOldData()
 
 
 
+
+function getNewWordBySubject(subject, level)
+{
+
+   var curShortQuest = Math.floor(Math.random() * myLines.length) + questsVar;
+   var stepSize = 30 + Math.floor(Math.random() * 20);
+   
+
+   var counter = 0;
+    
+   while(counter++ < 1000)
+   {
+      
+      curShortQuest = curShortQuest  + stepSize;
+      curShortQuest = curShortQuest % myLines.length;
+
+      var newLine = myLines[curShortQuest];
+      
+      var curId = readItemFromLine(0, newLine);
+      var curSubject = readItemFromLine(2, newLine);
+      var curLevel = readItemFromLine(1, newLine);
+
+      if(curSubject === subject && curLevel === level)   
+         if(!checkQuestId(curId))
+         {
+          questsIdArr.push(curId);
+          return newLine;
+         }
+      
+
+    }
+
+   counter = 0;
+   
+    while(counter++ < 500)
+   {
+
+      curShortQuest = curShortQuest  + stepSize + counter;
+      curShortQuest = curShortQuest % myLines.length;      
+
+      var newLine = myLines[curShortQuest];
+      
+      var curId = readItemFromLine(0, newLine);
+      var curSubject = readItemFromLine(2, newLine);
+      var curLevel = readItemFromLine(1, newLine);
+
+      if(curSubject === subject && curLevel === "1332")
+          if(!checkQuestId(curId))
+          {
+           questsIdArr.push(curId);
+           return newLine;
+          }
+       
+
+    }
+
+
+}
+
+
+
+
+
+
+/*
 function getNewWordBySubject(subject, level)
 {
 
@@ -649,7 +714,7 @@ function getNewWordBySubject(subject, level)
 
 
 }
-
+*/
 
 
 
