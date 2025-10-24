@@ -6,6 +6,9 @@ var selary;
 var currency;
 var questsVar;
 var playersInput = [];
+var userName;
+var startCode;
+var fileName;
 
 var gameTypeText = ["הדגמה - קל וקצר", "תרגול קצר", "תרגול ארוך", "טורניר - מלא"];
 
@@ -31,22 +34,48 @@ window.addEventListener('load', function() {
 
 function startGame()
 {
+  
+  if(gameType * 1 > 0)
+  {
+
+        if(userName.length <= 4)
+                 return; 
 
 
+  	if((checkStartCode1200(userName, startCode) === false) && (checkStartCode3000(userName, startCode) === false))
+      		return;
+
+
+        if(checkStartCode3000(userName, startCode) === true)
+                fileName = './assets/Pkid_Hashuma2.txt';
+        else
+                fileName = './assets/Pkid_Hashuma1.txt';
+         
+  }
+  else
+  {
+     fileName = './assets/Pkid_Hashuma1.txt';
+  }
+
+  
   localStorage.setItem('gameType', gameType); 
   localStorage.setItem('exposeLevel', exposeLevel); 
   localStorage.setItem('selary', selary); 
   localStorage.setItem('currency', currency);  
-  localStorage.setItem('questsVar', questsVar);  
+  localStorage.setItem('questsVar', questsVar);
+  localStorage.setItem('fileName', fileName);
+  
  
   localStorage.setItem('player1', playersInput[0]);
   localStorage.setItem('player2', playersInput[1]);
   localStorage.setItem('player3', playersInput[2]);
   localStorage.setItem('player4', playersInput[3]);
 
-  
-
   window.location.href = 'stage1.html';
+
+
+  var annonce = 'נא לעבור במקלדת למצב ENG , מקש Caps Lock כבוי.' + '\n' + 'שם הקובץ: ' + fileName;
+  alert(annonce);  
 
   
   window.open("./stage1.html","_self"); 
@@ -102,6 +131,14 @@ function handleChange()
       comment = getCopyrightsComment(questsVar);
 
 
+   selectedElement = document.getElementById("userName");
+   userName = selectedElement.value;
+   
+   selectedElement = document.getElementById("startCode");
+   startCode = selectedElement.value * 1;
+   
+
+
   var typeOfGame = "סוג המשחק: " + gameTypeText[gameType] + "</br>" + "מבנה: " + gameStructure[gameType] + "</br>";
 
   var gameParameters = "דרגת החשיפה: " + exposeLevelText[exposeLevel] + "</br>" + "שכר עבור נקודה: " + selary + " " + currency + "</br>" + "משתנה גיוון שאלות: " + questsVar + "</br>";
@@ -111,6 +148,148 @@ function handleChange()
   document.querySelector("#gameInformation").innerHTML = typeOfGame + gameParameters + players + comment;
 
 }
+
+
+function checkStartCode1200(userName, startCode)
+{
+        
+     var gimValue = gimatricValue(userName);
+
+     if (startCode === gimValue * 37 + 64812)
+        return true ;
+     else
+        return false;
+    
+  
+}
+
+
+
+
+function checkStartCode3000(userName, startCode)
+{
+   
+     var gimValue = gimatricValue(userName);
+
+     if (startCode === gimValue * 43 + 21846)
+        return true ;
+     else
+        return false;
+    
+  
+
+}
+
+
+function gimatricValue(checkedWord)
+{
+   var gimatricValue = 0;
+
+   for(var i=0; i<checkedWord.length; i++)
+   {  
+     switch(checkedWord[i])
+     {
+        case 'א':
+        gimatricValue+=1;
+        break;        
+        
+        case 'ב':
+        gimatricValue+=2;
+        break;
+        
+        case 'ג':
+        gimatricValue+=3;
+        break;        
+
+        case 'ד':
+        gimatricValue+=4;
+        break;        
+ 
+        case 'ה':
+        gimatricValue+=5;
+        break;        
+
+        case 'ו':
+        gimatricValue+=6;
+        break;        
+
+        case 'ז':
+        gimatricValue+=7;
+        break;        
+
+        case 'ח':
+        gimatricValue+=8;
+        break;        
+
+        case 'ט':
+        gimatricValue+=9;
+        break;        
+
+        case 'י':
+        gimatricValue+=10;
+        break;                
+
+        case 'כ':
+        case 'ך':
+        gimatricValue+=20;
+        break;        
+
+        case 'ל':
+        gimatricValue+=30;
+        break;        
+        
+        case 'מ':
+        case 'ם':
+        gimatricValue+=40;
+        break;
+        
+        case 'נ':
+        case 'ן':
+        gimatricValue+=50;
+        break;        
+
+        case 'ס':
+        gimatricValue+=60;
+        break;        
+ 
+        case 'ע':
+        gimatricValue+=70;
+        break;        
+
+        case 'פ':
+        case 'ף':
+        gimatricValue+=80;
+        break;        
+
+        case 'צ':
+        case 'ץ':
+        gimatricValue+=90;
+        break;        
+
+        case 'ק':
+        gimatricValue+=100;
+        break;        
+
+        case 'ר':
+        gimatricValue+=200;
+        break;        
+
+        case 'ש':
+        gimatricValue+=300;
+        break;                
+
+        case 'ת':
+        gimatricValue+=400;
+        break;        
+
+
+     }
+    
+   }
+  
+   return gimatricValue;
+}
+
 
 
 

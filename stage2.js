@@ -31,6 +31,7 @@ var selary;
 var currency;
 var questsVar;
 var numOfShortQuest;
+var fileName;
 
 var fileIsOpenFlag = false;
 var stageWasStarted = false;
@@ -233,7 +234,9 @@ function fetchData()
 {
     
     
-    fetch('./assets/Pkid_Hashuma.txt')
+    //fetch('./assets/Pkid_Hashuma.txt')
+
+      fetch(fileName)
        .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -1131,6 +1134,7 @@ function retrieveDataFromIndexJSfile()
     selary = localStorage.getItem('selary');
     currency = localStorage.getItem('currency'); 
     questsVar = localStorage.getItem('questsVar') * 1 ; 
+    fileName = localStorage.getItem('fileName');
     
     playersRevenue[0] = 8 + selary * playersPoints[0];
     playersRevenue[1] = 6 + selary * playersPoints[1];
@@ -1157,6 +1161,7 @@ function retrieveDataFromStage2JSfile()
     currency = localStorage.getItem('currency'); 
     questsVar = localStorage.getItem('questsVar') * 1;
     var textArr = localStorage.getItem('shortQuestsIdArr');
+    fileName = localStorage.getItem('fileName');
 
     covertTextToArray(shortQuestsIdArr, textArr);
         

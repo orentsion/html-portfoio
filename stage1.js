@@ -57,6 +57,7 @@ var exposeLevel;
 var selary;
 var currency;
 var questsVar;
+var fileName;
 
 var totalRevenue;
 var pkidHashumaCorrect;
@@ -252,7 +253,9 @@ function fetchData()
 {
     
     
-    fetch('./assets/Pkid_Hashuma.txt')
+    //fetch('./assets/Pkid_Hashuma.txt')
+
+      fetch(fileName)
        .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -2302,7 +2305,7 @@ function readSubjectName(subjectNumString)
        break;       
 
        case 4303:
-       subjectName = "במרחבי הגלובוס"; 
+       subjectName = "ברחבי הגלובוס"; 
        break;
 
        case 4304:
@@ -2445,6 +2448,7 @@ function secondStage()
   localStorage.setItem('currency', currency);
   localStorage.setItem('selary', selary);
   localStorage.setItem('questsVar', questsVar);   
+  localStorage.setItem('fileName', fileName);
 
   window.location.href = 'stage2.html';
 
@@ -2581,6 +2585,7 @@ function retrieveDataFromStartJSfile()
     selary = localStorage.getItem('selary');
     currency = localStorage.getItem('currency');
     questsVar = localStorage.getItem('questsVar') * 1;
+    fileName = localStorage.getItem('fileName');
      
 
 }
