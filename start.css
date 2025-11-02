@@ -232,7 +232,16 @@ footer  {
 
 .inputName {
    
-   width: 8%;   
+   width: 10%;
+   font-size: 1rem;   
+
+}
+
+
+.inputUser {
+   
+   width: 13%;
+   font-size: 1.1rem;   
 
 }
 

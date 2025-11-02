@@ -34,27 +34,41 @@ window.addEventListener('load', function() {
 
 function startGame()
 {
+  var gameNameStr;
   
   if(gameType * 1 > 0)
   {
-
-        if(userName.length <= 4)
-                 return; 
+        
+        if(userName.length <= 5)
+        {
+            alert('שם המשתמש או קוד ההפעלה אינם נכונים');
+            return; 
+        }
 
 
   	if((checkStartCode1200(userName, startCode) === false) && (checkStartCode3000(userName, startCode) === false))
-      		return;
+        {
+            alert('שם המשתמש או קוד ההפעלה אינם נכונים');
+      	    return;
+        }
 
 
         if(checkStartCode3000(userName, startCode) === true)
+        {
                 fileName = './assets/Pkid_Hashuma2.txt';
+                gameNameStr = "אושרה הכניסה ל- פקיד השומה 3000.";
+        }
         else
+        {
                 fileName = './assets/Pkid_Hashuma1.txt';
+                gameNameStr = "אושרה הכניסה ל- פקיד השומה 1200.";
+        }
          
   }
   else
   {
      fileName = './assets/Pkid_Hashuma1.txt';
+     gameNameStr = "משחק הדגמה חינמי - כניסה חופשית.";
   }
 
   
@@ -74,7 +88,7 @@ function startGame()
   window.location.href = 'stage1.html';
 
 
-  var annonce = 'נא לעבור במקלדת למצב ENG , מקש Caps Lock כבוי.' + '\n' + 'שם הקובץ: ' + fileName;
+  var annonce = gameNameStr + '\n' + 'נא לעבור במקלדת למצב ENG , מקש Caps Lock כבוי.';
   alert(annonce);  
 
   
