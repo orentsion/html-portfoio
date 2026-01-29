@@ -9,7 +9,7 @@
    background-color: #faf9f6;
 
    width: 55rem;
-   height: 73rem;
+   height: 72rem;
   
    margin: 0;
    padding: 0;
@@ -108,7 +108,8 @@ h1  {
 
 h2  {
    
-   font-size: 2.5rem;
+   //font-size: 2.5rem;
+   font-size: 2.2rem;
    color: #336D82;   
  
    font-family: "Rubik Mono One", monospace;
