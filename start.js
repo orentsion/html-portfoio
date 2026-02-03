@@ -68,7 +68,7 @@ function startGame()
   else
   {
      fileName = './assets/Pkid_Hashuma1.txt';
-     gameNameStr = "משחק הדגמה חינמי - כניסה חופשית.";
+     gameNameStr = "משחק הדגמה - כניסה חופשית.";
   }
 
   
